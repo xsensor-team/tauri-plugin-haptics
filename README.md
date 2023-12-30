@@ -14,6 +14,17 @@ and to your cargo.toml
 tauri-plugin-haptics = { git = "https://github.com/xsensor-team/tauri-plugin-haptics.git" }
 ```
 
+and connect the plugin in your tauri builder
+
+```rust
+tauri::Builder::default()
+    .setup()
+    .plugin(tauri_plugin_haptics::init())
+    .invoke_handler(tauri::generate_handler![])
+    .run(tauri::generate_context!())
+    .expect("Error while building tauri appliction");
+```
+
 ### Android instructions
 
 make sure to add the following permission to your `AndroidManifest.xml`
