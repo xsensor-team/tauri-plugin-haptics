@@ -1,7 +1,7 @@
 {
   "name": "tauri-plugin-haptics-api",
   "version": "0.0.0",
-  "author": "You",
+  "author": "Keegan Stothert",
   "description": "",
   "browser": "webview-dist/index.js",
   "main": "webview-dist/index.js",

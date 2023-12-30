@@ -1,24 +1,29 @@
-// import UIKit
-// import WebKit
-// import Tauri
+import SwiftRs
+import Tauri
+import UIKit
+import WebKit
 
-// public class HapticsPlugin: Plugin {
-//     @objc public func triggerHaptics(_ invoke: Invoke) throws {
-//         // Choose the type of haptic feedback you want
-//         let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
-//         feedbackGenerator.prepare()
-//         feedbackGenerator.impactOccurred()
+class PingArgs: Decodable {
+  let value: String?
+}
 
-//         // Optionally send a response back
-//         invoke.resolve(["status": "Haptics triggered"])
-//     }
-// }
+class HapticsPlugin: Plugin {
+  @objc public func trigger(_ invoke: Invoke) throws {
+    let args = try invoke.parseArgs(PingArgs.self)
+    // Choose the type of haptic feedback you want
+    let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    feedbackGenerator.prepare()
+    feedbackGenerator.impactOccurred()
 
-// @_cdecl("init_haptics_plugin")
-// func initPlugin() -> Plugin {
-//   return HapticsPlugin()
-// }
+    // Optionally send a response back
+    // invoke.resolve(["status": "Haptics triggered"])
 
-//func initHapticsPlugin(name: SRString, webview: WKWebView?) {
-//    Tauri.registerPlugin(webview: webview, name: name.toString(), plugin: HapticsPlugin())
-//}
+
+    invoke.resolve(["value": args.value ?? ""])
+  }
+}
+
+@_cdecl("init_plugin_haptics")
+func initPlugin() -> Plugin {
+  return HapticsPlugin()
+}

@@ -7,5 +7,5 @@ export async function execute() {
 
 export async function ping(value: string) {
   console.log("ping called");
-  return await invoke("plugin:haptics|ping", { value });
+  return await invoke("plugin:haptics|trigger", { value });
 }

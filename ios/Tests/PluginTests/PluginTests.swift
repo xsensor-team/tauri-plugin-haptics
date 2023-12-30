@@ -1,8 +1,8 @@
 import XCTest
-@testable import ExamplePlugin
+@testable import HapticsPlugin
 
-final class ExamplePluginTests: XCTestCase {
+final class HapticsPluginTests: XCTestCase {
     func testExample() throws {
-        let plugin = ExamplePlugin()
+        let plugin = HapticsPlugin()
     }
 }
