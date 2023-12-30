@@ -22,7 +22,7 @@ tauri::Builder::default()
     .plugin(tauri_plugin_haptics::init())
     .invoke_handler(tauri::generate_handler![])
     .run(tauri::generate_context!())
-    .expect("Error while building tauri appliction");
+    .expect("Error while building tauri application");
 ```
 
 ### Android instructions
