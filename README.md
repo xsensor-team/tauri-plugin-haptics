@@ -5,7 +5,7 @@
 add directly to your package.json
 
 ```json
-"tauri-plugin-haptics-api": "github:keeganstothert/tauri-plugin-haptics#main"
+"tauri-plugin-haptics": "github:keeganstothert/tauri-plugin-haptics#main"
 ```
 
 ### Android instructions
