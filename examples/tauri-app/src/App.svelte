@@ -1,6 +1,6 @@
 <script>
   import Greet from './lib/Greet.svelte'
-  import { execute, ping } from 'tauri-plugin-haptics-api'
+  import { execute, trigger } from 'tauri-plugin-haptics-api'
 
 	let response = ''
 
@@ -11,7 +11,7 @@
 	async function _execute() {
     try { 
       //  const result = await execute()
-      const result = await ping("the great value")
+      const result = await trigger("the great value")
 
       console.log(result)
       updateResponse(result)
