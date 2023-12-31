@@ -1,6 +1,6 @@
 <script>
   import Greet from './lib/Greet.svelte'
-  import { trigger } from 'tauri-plugin-haptics'
+  import { trigger } from 'tauri-plugin-haptics-api'
 
 	let response = ''
 

@@ -78,6 +78,12 @@
       "path": ".",
       "manager": "rust",
       "releaseTag": "crate-v${ pkgFile.version }"
+    },
+    "tauri-plugin-haptics-api": {
+      "path": ".",
+      "manager": "javascript",
+      "dependencies": ["tauri-plugin-haptics"],
+      "releaseTag": "npm-v${ pkgFile.version }"
     }
   }
 }
