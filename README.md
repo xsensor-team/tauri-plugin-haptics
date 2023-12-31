@@ -5,7 +5,7 @@
 add directly to your package.json
 
 ```json
-"tauri-plugin-haptics": "github:xsensor-team/tauri-plugin-haptics#main"
+"tauri-plugin-haptics-api": "github:xsensor-team/tauri-plugin-haptics#main"
 ```
 
 and to your cargo.toml
